@@ -1,16 +1,13 @@
 # encrypt-phone-numbers
 
-In order to use this function in your script add the following line at the top of your js file:
-
-``
-const encryptedNumber = require ('encrypt-phone-number')
-``
-
-In order to encrypt any phone number, you just need to call the function **encryptNumber** and pass two arguments: the phone number (as string) and the number of digits you want to hide.
-After you added the function to your js file you can call the function as following:
+In order to encrypt any phone number, you need to call the function **encryptNumber** and pass three arguments: the phone number (as string or array of strings), the number of digits you want to hide and the symbol you want to use to hide the numbers
 
 ```javscript
-encryptedNumber('+1-541-754-3010', 5)
+encryptNumber('+1-541-754-3010', 5, 'X')
 // Result :  +1-541-75X-XXXX
 ```
-The function ignores any symbol than numbers during the encryption, indeed any number format can be used.
+
+## Installation
+
+* `npm install 'encrypt-phone-number'`
+* In your JS file: `const encryptedNumber = require ('encrypt-phone-number')`
