@@ -1,7 +1,9 @@
 const expect = require("expect");
 const number = require("..");
+
 describe("Encryption receive the proper arguments", () => {
   const str = "123-456-789";
+  const arr = ["123 - 456", "678 - 890", "123-978-346"];
   const pos = 2;
   const symbol = "X";
   it("should return false if one of the three required arguments is not defined", () => {
@@ -18,9 +20,11 @@ describe("Encryption receive the proper arguments", () => {
     expect(typeof number.encryptNumber(str, pos, symbol)).toBe("string");
   });
 
-  it("should have a string as first argument", () => {
+  it("should have a string or an array as first argument", () => {
     expect(typeof str).toBe("string");
+    expect(Array.isArray(arr)).toBe(true);
     expect(typeof pos).toBe("number");
     expect(typeof symbol).toBe("string");
+    number.encryptNumber(["123 - 456", "678 - 890", "123-978-346"], 2, "X");
   });
 });
