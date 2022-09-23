@@ -1,6 +1,6 @@
 {
   "name": "encrypt-phone-numbers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Encrypt any phone number",
   "main": "index.js",
   "scripts": {
